@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background: black;
+}
+
+.container-header{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+.logo-title{
+    display: flex;
+}
+
+.logo-title img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.logo-title h4{
+    color: white;
+    font-weight: 100;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.icon-menu{
+    position: absolute;
+    top: 14px;
+    color: white;
+    font-size: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    list-style: none;
+}
+
+.icon-menu:hover{
+    border: rgba(255, 255, 255, 0.4);
+    color: black;
+    background: white;
+}
+
+.content-all{
+    width: 100%;
+    max-width: 1000px;
+    min-width: 300px;
+    background: black;
+    line-height: 18px;
+}
+
+.content-all .menu{
+    width: 0px;
+    position: absolute; /*Que mantenga la posición junto a "Menu"*/
+}
+
+.content-all ul{
+    list-style: none;
+}
+
+.content-all .menu li a{
+    color: #494949;
+    display: block;
+    padding: 15px 20px;
+    background: #e9e9e9;
+}
+
+.content-all .menu li a:hover{
+    background: #1a95d5;
+    color: #fff;
+}
+
+.content-all .menu ul{
+    display: none;
+}
+
+.content-all .menu ul li a{
+    background: #424242;
+    color: #e9e9e9;
+}
+
+.content-all .menu .icono{
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.content-all .menu .icono.izquierda{
+    float: left;
+    margin-right: 10px;
+}
+
+.content-all .menu .icono.derecha{
+    float: right;
+    margin-left: 10px;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .menu{ /*Cuando esté activado*/
+    width: 300px;
+    position: absolute;
+}
+
+.menu{
+    z-index: 100;
+    position: fixed;
+    width: 0px;
+    height: 100vh;
+    transition: all 500ms cubic-bezier(1,0,0,1);
+    transition-timing-function: cubic-bezier(1,0,0,1); 
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-menu{
+    display: none;
+    padding: 20px;
+    background: #0d2c44;
+    color: #fff;
+}
+
+/*Portada*/
+
+.container-portada{
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/QuintamarCut.jpg);
+    background-size: 150%;
+    animation: movimiento 10s infinite linear alternate;
+    position: relative;
+}
+
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: top right;
+    }
+}
+
+.capa-gradient{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, blue);
+    opacity: 0.5;
+}
+
+.container-details{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+.details{
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    top: 20px;
+    color: white;
+}
+
+.details h1{
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.details p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.details button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border-style: none;
+    border: 1px solid white;
+    color: white;
+    margin-top: 20px;
+    transition: background 300ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.details button:hover{
+    background: white;
+    color: black;
+}
+
+/*Articulos*/
+
+main{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+article{
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+article h1{
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+article hr{
+    max-width: 500px;
+    height: 4px;
+    border-style: none;
+    background: -webkit-linear-gradient(left, black, blue);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+article p{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 500px){
+    .details p{
+        font-size: 18px;
+    }
+}
+
+/*Direciones dptos Google Maps*/
+
+.direcciones{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/*Derechos de Autor*/
+
+footer{
+    background-color: #286af0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+/*Formulario*/
+
+#formulario label{
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 150px;
+    display: inline-block;
+}
+
+#submit{
+    margin-left: 338px;
+    margin-top: 10px;
+}
